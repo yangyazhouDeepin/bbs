@@ -1,0 +1,60 @@
+@import 'mobile.scss';
+.login{
+	top: pxToRem(236)!important;
+	width: auto;
+	padding: 0;
+	.logo{
+		margin-bottom: pxToRem(74);
+		img{
+			width: pxToRem(301);
+			height: pxToRem(78);
+		}
+	}
+	.info{
+		display: none;
+	}
+	.login_form input{
+		height: pxToRem(86);
+		box-sizing: border-box;
+		width: pxToRem(598);
+		border-radius: pxToRem(8);
+	}
+	.login_form input[type="text"], input[type="password"], input[type="email"] {
+		background-color: rgba(0,0,0,.5);
+		font-size: pxToRem(28);
+		margin-bottom: pxToRem(20);
+		padding: 0 pxToRem(30);
+	}
+	.box,.links{display: none;}
+	input[type="submit"] {
+		font-size: pxToRem(32);
+		line-height: pxToRem(86);
+		margin-top: pxToRem(6);
+	}
+	.three-party{
+		margin-top: pxToRem(54);
+		p{
+			text-align: center;
+			font-size: pxToRem(28);
+			color: rgba(255,255,255,.8);
+		}
+		.menu{
+			width: pxToRem(244);
+			margin: pxToRem(28) auto 0;
+			overflow: hidden;
+			a{
+				float: left;
+				display:block;
+				img{
+					width: pxToRem(48);
+					height: pxToRem(48);
+				}
+			}
+			a:nth-child(2){
+				margin: 0 pxToRem(50);
+			}
+		}
+	}
+
+}
+#footer{display: none;}

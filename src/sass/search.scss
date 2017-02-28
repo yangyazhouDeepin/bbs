@@ -1,0 +1,136 @@
+@function precent($width, $basic: 1140){
+	@return ($width / $basic) * 100%;
+}
+*{margin:0 ; padding: 0;}
+html,body{
+	height: 100%;
+	width:  100%;
+}
+body{
+	background: #f9f9f9;
+	font-family: '微软雅黑', 'Source Han Sans';
+	padding-top: 100px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html[lang="en-US"] body{
+	font-family: 'open sans',"Noto Sans CJK SC","Source Han Sans CN";
+}
+
+input{
+	font-family: inherit;
+}
+
+.wrap{
+	min-height: 718px;
+	box-sizing: border-box;
+}
+.search .text:focus{
+	border: 1px solid #54a5d0;
+}
+
+$fc1: #303646;
+.left{float: left;}
+.right{float: right;}
+input{outline: none;}
+.button:hover{
+	opacity:.9;
+	cursor: pointer;
+}
+#page-search.wrap{
+	width: 1140px;
+	margin: 0 auto;
+	background: #fff;
+	padding: precent(50,1140);
+	border-radius: 4px;
+
+	h1{
+		font-size: 25px;
+		font-weight: normal;
+		color: $fc1;
+	}
+	.search{
+		margin-top: 20px;
+		overflow: hidden;
+		
+		input{
+			box-sizing: border-box;
+		}
+		.text{
+			width: precent(650,1040);
+			height: 36px;
+			line-height: 36px;
+			font-size: 14px;
+			color: #303646;
+			border-radius: 4px;
+			border: 1px solid #e5e5e5;
+			padding-left: precent(15,1040);
+
+		}
+		.button{
+			height: 36px;
+			line-height: 36px;
+			width: precent(96,1040);
+			background: #1D8FD0;
+			border: none;
+			text-align: center;
+			color: #fff;
+			font-size: 14px;
+			border-radius: 4px;
+		}
+
+		.text:focus{
+			border: 1px solid #54a5d0;
+		}
+
+	}
+
+	.line{
+		height: 1px;
+		background: #ececec;
+		margin-top: 30px;
+		margin-bottom: 38px;
+	}
+
+	.box{
+		overflow: hidden;
+
+		.img{
+			width: 120px;
+			height: 135px;
+			border: none;
+			outline: none;
+		}
+		.content{
+			margin-left: 35px;
+
+			p{
+				margin-top: 10px;
+				font-size: 14px;
+				color: #303646;
+				line-height: 26px;
+
+			}
+			input{
+				width: 96px;
+				height: 36px;
+				line-height: 36px;
+				color: #fff;
+				background-color: #1D8FD0;
+				text-align: center;
+				border: none;
+				border-radius: 4px;
+				outline: none;
+				margin-top: 20px;
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 1140px){
+	.wrap{
+		width: auto;
+	}
+}

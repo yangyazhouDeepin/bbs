@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mashupcloud demo</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="mashupcloud Template"/>
+    <meta name="keywords" content="mashupcloud"/>
+    <meta name="author" content="helingyun"/>
+    <script src="https://cdn.staticfile.org/jquery/3.1.0/jquery.min.js"></script>
+    <!--从NBA应用控制面板的我的应用-SDK下载去下载SDK-->
+    <script src="js/mashup_sdk.js"></script>
+</head>
+<body>
+<div id="result"></div>
+</body>
+<script type="text/javascript">
+    var appid = '';
+    var token = '';
+    $(document).ready(function () {
+        //把要执行的方法加入队列
+        ajax_queue_add(auth);
+        ajax_queue_add(listStar);
+        //顺序执行队列里的方法
+        ajax_queue_run();
+    });
+
+
+    function auth() {
+        /**
+         * 获得应用授权token
+         * 输入参数:
+         * 1.appkey     app的用户名
+         * 2.appsecret 	app的密码
+         * 返回值:
+         * ["OK", "token", "appid"]
+         */
+        mashup_sdk.auth({
+            params: {
+                //用自己应用的appid,appsecret替换
+                appkey: 'dLjYnwciPdTPmrOCUYIMDWYsTbtgLmQN',
+                appsecret: 'mVHHDUndtlxPdoRURKQXYbjgQnzpJIDx'
+            },
+            onOK: function (json) {
+                appid = json[2];
+                token = json[1];
+                //继续执行队列
+                ajax_queue_run();
+            },
+            onERR: function (json) {
+                alert("error=" + json)
+                //继续执行队列
+                ajax_queue_run();
+            }
+        });
+    }
+
+    function listStar() {
+        /**
+         * 获得球星列表
+         * 输入参数:
+         * 1.appid       应用ID            必填
+         * 2.token 	     授权令牌           必填
+         * 3.字段同名参数  字段同名参数       选填
+         * 4.pageNumber  页号，默认1        选填
+         * 5.pageSize 	 每页条数，默认10    选填
+         * 6.where       自定义查询条件      选填
+         * 7.sortBy 	 排序条件           选填
+         * 8.groupBy 	 分组条件           选填
+         * 9.having 	 包含条件           选填
+         * 返回值:
+         * ["OK", [totalCount, pageCount, pageSize], [{实体字段名称和值}, {}, ...]]
+         */
+        mashup_sdk.listStar({
+            params: {
+                appid: appid,
+                token: token
+            },
+            onOK: function (json) {
+                var starList = json[2];
+                var starText = "";
+                for (var key in starList) {
+                    var star = starList[key];
+                    starText += "<ul>";
+                    starText += "<li>球星:" + star.name + "</li>";
+                    starText += "<li>球队:" + star.team + "</li>";
+                    starText += "<li>场均得分:" + star.score + "</li>";
+                    starText += "<li>录入时间:" + star.createAt + "</li>";
+                    starText += "</ul>";
+                }
+                $("#result").append(starText);
+            },
+            onERR: function (json) {
+                alert("error=" + json)
+            }
+        });
+    }
+</script>
+
+</html>

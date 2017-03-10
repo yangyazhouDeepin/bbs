@@ -1,0 +1,14 @@
+div table.wikitable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #ffffff;
+  width: 100%; }
+  div table.wikitable > * > th, div table.wikitable > * > td, div table.wikitable > tr > th, div table.wikitable > tr > td {
+    border: 1px solid #E6E6E6;
+    padding: 12px 0;
+    padding-left: 38px;
+    font-size: 14px; }
+  div table.wikitable > * > th, div table.wikitable > tr > th {
+    min-height: 64px;
+    vertical-align: middle;
+    background-color: #fcfbfc; }

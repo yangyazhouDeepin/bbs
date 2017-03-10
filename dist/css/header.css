@@ -1,0 +1,92 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+html[lang='en-US'] .wrap .new-menu > li > a {
+  padding: 0 10px; }
+
+header {
+  background-color: #282828;
+  position: fixed;
+  width: 100%; }
+  header .new-wrap {
+    width: 1170px;
+    margin: 0 auto;
+    transition: all 0.3s;
+    position: relative; }
+    header .new-wrap .logo {
+      display: block;
+      width: 127px;
+      height: 32px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+      -o-transform: translate(0, -100%);
+      transform: translate(0, -100%); }
+    header .new-wrap .new-menu {
+      height: 100%; }
+      header .new-wrap .new-menu > li {
+        float: left;
+        height: 100%;
+        position: relative; }
+        header .new-wrap .new-menu > li > a {
+          color: #dedede;
+          padding: 0 15px; }
+          header .new-wrap .new-menu > li > a .line-animate {
+            position: relative;
+            font-size: 14px;
+            font-family: '微软雅黑','Source Han Sans'; }
+          header .new-wrap .new-menu > li > a .line-animate:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            height: 2px;
+            width: 100%;
+            background: #2ca7f8;
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+            transition: all 0.3s; }
+      header .new-wrap .new-menu li:hover .line-animate:before {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1); }
+      header .new-wrap .new-menu li:hover .sub-menu {
+        display: block; }
+      header .new-wrap .new-menu li:hover > a {
+        color: #2ca7f8; }
+      header .new-wrap .new-menu .add-search > a, header .new-wrap .new-menu .add-login > a {
+        padding: 0 !important;
+        display: block;
+        width: 16px;
+        height: 100%; }
+  header .left {
+    float: left; }
+  header .right {
+    float: right; }
+  header .clear {
+    overflow: hidden; }
+  header .hh {
+    height: 80px;
+    line-height: 80px; }
+  header .move {
+    height: 54px;
+    line-height: 54px; }
+
+@media screen and (max-width: 1170px) {
+  .wrap {
+    width: auto;
+    box-sizing: border-box;
+    padding: 0 10px; } }

@@ -1,0 +1,159 @@
+$fc1: #303646;
+$fc2: #545968;
+$ah: #138bca;
+
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@mixin transform($param) {
+	-webkit-transform: $param;
+	  -ms-transform: $param;
+	  -o-transform: $param;
+	  transform: $param;
+}
+
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+body{
+	padding-top: 1px;
+	background-color: #F9F9F9;
+	font-family: '微软雅黑', 'Source Han Sans';	
+}
+html[lang="en-US"] body{
+	font-family: 'open sans',"Noto Sans CJK SC","Source Han Sans CN";
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul,li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear:after{
+	content: ",";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+.wrap{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 1170px){
+	.wrap{
+		width: auto;
+	}
+}
+
+#edit{
+	@include box-sizing;
+	padding: 40px;
+	padding-bottom: 60px;
+	border: 1px solid #ececec;
+	border-radius: 4px;
+	background: #ffffff;
+	margin-top: 100px;
+	
+	>.title{
+		position: relative;
+		h1{
+			font-weight: normal;
+			font-size: 25px;
+			color: #AFAFAF;
+			margin-bottom: 16px;
+		}
+		>p{
+			font-size: 12px;
+			color: $fc2;
+			a{
+				color: $ah;
+			}
+		}
+
+		.function{
+			position: absolute;
+			right: 0;
+			bottom: 18px;
+			span{
+				display: inline-block;
+				width: 81px;
+				height: 37px;
+				line-height: 35px;
+				@include box-sizing;
+				color: $fc1;
+				font-size: 14px;
+				text-align: center;
+				border: 1px solid #e6e6e6;
+				border-radius: 4px;
+			}
+			.active{
+				background: #1D8FD0;
+				color: #ffffff;
+				border-color: #1D8FD0;
+			}
+		}
+	}
+	.line{
+		height: 1px;
+		background: #ececec;
+		margin-top: 18px;
+		margin-bottom: 10px;
+	}
+
+	.main{
+		textarea{
+			width: 100%;
+			border-radius: 4px;
+			border-color: #d9d9d9;
+			@include box-sizing;
+			padding: 34px 45px 41px 21px;
+			color: $fc1;
+			line-height: 26px;
+			font-size: 14px;
+			min-height: 600px;
+		}
+
+		form{
+			margin-bottom: 30px;
+		}
+		.listening{
+			font-size: 12px;
+			line-height: 26px;
+			input{
+				vertical-align: middle;
+				margin-right: 5px;
+				outline: none;
+			}
+		}
+
+		.notice{
+			color: $fc2;
+			font-size: 12px;
+			line-height: 22px;
+			margin-top: 20px;
+		}
+
+	}
+
+
+}

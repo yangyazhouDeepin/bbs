@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/citiao.css">
+    <link rel="stylesheet" type="text/css" href="../css/newFooter.css">
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/wiki-search.js"></script>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" id="ct">
+        <span class="right-line"></span>
+        <div class="slide">
+            <div class="search">
+            	<div class="search_box">
+            		<input type="text" placeholder="请输入搜索内容" />
+            		<span class="icon-search"></span>
+            	</div>
+                
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="active"><a href="#mark_1">1、前言</a></li>
+                    <li><a href="#mark_2">2、下载镜像</a> </li>
+                    <li><a href="#mark_3">3、校验镜像></a></li>
+                    <li><a href="#mark_4">4、制作启动盘</a></li>
+                    <li><a href="#mark_5">5、安装深度操作系统</a>
+                        <ul class="sub-nav">
+                            <li><a href="#">5.1、安装深度操作系统</a></li>
+                            <li><a href="#">5.2、专家模式</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">6、安装完成</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="head">
+                <p>原生安装 <span id="edit">编辑</span></p>
+                <div class="history">
+                    <p class="num">
+                        <i class="time"></i> 30次
+                        <a href="">历史版本</a>
+                        <i class="date"></i> 2016-12-25
+                    </p>
+                </div>
+            </div>
+            <section>
+                <div class="before">
+	            	<div class="other">
+	                    <p>
+	                        重新定向：<a href="">文件传输协议</a>
+	                    </p>
+	                </div>
+                    
+                    <h3 class="nom" id="mark_1" name="mark_1">前言</h3>
+                    <p>本条目将介绍如何使用U盘安装深度操作系统系统，您也可以选择查看<a href="">>深度操作系统安装教程（深度启动盘制作工具）</a>。</p>
+                </div>
+                    <h3 id="mark_2" name="mark_2">下载镜像源</h3>
+                    <p>请确保您的电脑满足以下的配置要求，如果您的电脑配置低于以下的要求，将无法完美的体验深度操作系统：</p>
+                    <p>U盘：2 GB以上</p>
+                    <p>处理器：Intel Pentium IV 2GHz 或更快的处理器</p>
+                    <p>内存：至少 2G 内存(RAM)，4G 以上是达到最佳性能的推荐值 </p>
+                    <p>硬盘:至少 10 GB 的空闲空间 </p>
+                    <p>请使用浏览器打开<a href="">deepin下载页面</a>，下载深度操作系统系统最新版本的镜像文件（以便您能够体验到最新特性）。</p>
+                    <div class="remind">
+                        <p>注意</p>
+                        <p>1.如果电脑只有2G或以下的内存空间，推荐下载32位版本。如果电脑拥有超过2G以上的内存空间，推荐下载64位版本。</p>
+                        <p>2.安装64位需要CPU支持x86-84或AMD64指令集支持，您可以使用<a href="">CPU-Z</a>（Windows软件）查看当前电脑是否支持该指令集。</p>
+                    </div>
+                    <h3>校验镜像</h3>
+                    <p>下载深度操作系统镜像完成后，需要对其进行校验，错误的镜像将不能用于深度操作系统的安装，校验方法如下：</p>
+                    <p> Windows系统
+                        <p>
+                            <p>下载<a href="">Hash软件</a>，校验您下载的镜像的MD5值与<a href="">下载页面</a>提供的MD5值是否一致</p>
+                            <p>Linux系统</p>
+                            <p>在镜像文件目录打开终端，然后执行：</p>
+                            <div class="text">
+                                md5sum xxxx.iso ##xxxx.iso即为您下载的系统镜像文件名，可使用Tab键自动补全文件名。
+                            </div>
+                	<h3>安装深度操作系统</h3>
+                	<p>
+                		如果您的电脑主板为UEFI模式，请在主板设置中关闭“安全启动（Secure Boot）”，然后重新启动计算机，并在BIOS/UEFI界面下特定键按住"改变启动顺序"键。这个按键一般会在BIOS/UEFI界面显示出来。
+                	</p>
+                	<h3>
+                		简易模式
+                	</h3>
+                	<p>
+                		如果硬盘已经存在Windows系统，可以选择将深度操作系统安装到Windows中的一个分区，安装器将格式化选中的分区，因此请提前转移需要的数据，只要Windows系统的系统盘（一般为C盘）不被破坏，即可自动组成双系统。
+如果当前硬盘为新硬盘，可以直接选择整块硬盘安装，安装器将自动把深度操作系统到整块硬盘上，并且自动解决引导问题，如果你需要自定义安装，你可以选择使用专家模式。
+                	</p>
+                	<h3>
+                		专家模式
+                	</h3>
+                	<p>
+                		使用专家模式需要您对Linux的挂载点有一定的了解，我们推荐以下挂载点方案：使用专家模式需要您对Linux的挂载点有一定的了解，我们推荐以下挂载点方案：
+                	</p>
+                	<p>
+                		设置好挂载点后，请将系统引导器（Grub或64位特有UEFI引导器）安装到整块硬盘上（如果为多硬盘，请选择第一块启动的硬盘），完成以上设置后，即可点击下一步开始安装。
+                	</p>
+            </section>
+        </div>
+    </div>
+    <div id="all-deepin-footer">
+        <div id="all-deepin-footer">
+            <div class="f-wrap">
+                <ul class="f-nav">
+                    <li class="f-item"><a href="https://www.deepin.org/download/">下载</a></li>
+                    <li class="f-item"><a href="http://wiki.deepin.org">文档</a></li>
+                    <li class="f-item"><a href="https://www.deepin.org/dde/">项目</a></li>
+                    <li class="f-item"><a href="http://bbs.deepin.org">用户社区</a></li>
+                    <li class="f-item"><a href="https://www.deepin.org/developer-community/planning/">开发者社区</a></li>
+                    <li class="f-item"><a href="">关于我们</a></li>
+                </ul>
+                <div class="deepin-copy">
+                    <p>©2011-2017 武汉深之度科技有限公司 鄂ICP备14003693号-3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+    	$(document).ready( function(){
+    		$('.search_box input').on("focus", function(){
+    			$(".search_box").addClass("active");
+    		})
+    		$('.search_box input').on("blur", function(){
+    			$(".search_box").removeClass("active");
+    		})
+
+    		//锚点
+    		createMark();
+    		function createMark(){
+    			$(".nav a").each( function(i){
+    				$(this).prop("href","#mark_"+i);
+    			})
+
+    			$("section h3").each(function(i){
+    				$(this).prop("id","mark_"+i);
+    			})
+    		}
+
+            $(".nav >ul >li").on("click", function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            })
+
+
+
+    	})
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+@charset "UTF-8";
+#edit input, #edit textarea {
+  font-family: inherit; }
+
+#edit a {
+  color: #138BCA; }
+
+#edit a:hover {
+  color: #2ca7f8 !important; }
+
+input[type="submit"]:hover, input[type="button"]:hover {
+  cursor: pointer; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  padding-top: 1px;
+  background-color: #F9F9F9;
+  font-family: '微软雅黑', 'Source Han Sans'; }
+
+html[lang="en-US"] body {
+  font-family: 'open sans',"Noto Sans CJK SC","Source Han Sans CN"; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  list-style: none; }
+
+#edit a {
+  text-decoration: none; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear:after {
+  content: ",";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+.wrap {
+  width: 1170px;
+  margin: 0 auto; }
+
+@media screen and (max-width: 1170px) {
+  .wrap {
+    width: auto; } }
+
+#edit {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px;
+  padding-bottom: 0px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  background: #ffffff;
+  margin-top: 100px; }
+  #edit input, #edit textarea {
+    outline: none; }
+  #edit .mw-newarticletext > p {
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 4px;
+    background-color: #d8ecff;
+    padding: 10px 20px;
+    color: #303646; }
+  #edit #mw-content-text > p {
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 4px;
+    background-color: #d8ecff;
+    padding: 10px 20px;
+    color: #303646; }
+  #edit #mw-content-text > ul {
+    margin-top: 10px; }
+    #edit #mw-content-text > ul li {
+      font-size: 14px;
+      color: #303646; }
+    #edit #mw-content-text > ul li:before {
+      content: "· "; }
+  #edit .title {
+    position: relative; }
+    #edit .title h1 {
+      font-weight: normal;
+      font-size: 25px;
+      color: #AFAFAF;
+      margin-bottom: 16px;
+      border: none; }
+    #edit .title > p {
+      font-size: 12px;
+      color: #545968; }
+      #edit .title > p a {
+        color: #138bca; }
+  #edit .line {
+    height: 1px;
+    background: #ececec;
+    margin-top: 18px;
+    margin-bottom: 10px; }
+  #edit #wpTextbox1 {
+    width: 100%;
+    border-radius: 4px;
+    border-color: #d9d9d9;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 21px;
+    color: #303646;
+    line-height: 26px;
+    font-size: 14px;
+    min-height: 600px; }
+  #edit #wpTextbox1:focus {
+    border-color: #138bca; }
+  #edit .editOptions {
+    background: #ffffff;
+    border: none;
+    margin-top: 14px; }
+    #edit .editOptions label {
+      font-size: 12px;
+      line-height: 26px; }
+    #edit .editOptions input[type="checkbox"] {
+      vertical-align: middle; }
+    #edit .editOptions #wpSummary {
+      line-height: 28px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid #d9d9d9;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0 10px; }
+    #edit .editOptions #wpSummary:focus {
+      border-color: #138bca; }
+    #edit .editOptions #editpage-copywarn p {
+      color: #545968;
+      font-size: 12px;
+      line-height: 22px;
+      margin-top: 20px; }
+      #edit .editOptions #editpage-copywarn p a {
+        color: #138bca;
+        text-decoration: none; }
+    #edit .editOptions .editButtons {
+      margin-top: 10px;
+      font-size: 14px; }
+      #edit .editOptions .editButtons input {
+        background: #fff;
+        border: 1px solid #ccc;
+        color: #303646;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 4px; }
+      #edit .editOptions .editButtons input:hover {
+        background: #0b79b8;
+        color: #fff;
+        border-color: #0b79b8; }
+      #edit .editOptions .editButtons a {
+        color: #138bca; }
+  #edit #mw-returnto {
+    margin-bottom: 40px; }
+
+#edit .limitreport {
+  display: none; }
+
+#edit .mw-undo-success {
+  color: #303646;
+  margin: 10px 0; }
+
+#edit #wikiDiff table {
+  margin-bottom: 20px; }
+
+#edit #wikiPreview #toc ul {
+  padding: 10px;
+  margin: 0; }
+  #edit #wikiPreview #toc ul li:before {
+    display: none; }
+
+#edit #wikiPreview #toc h2:before {
+  display: none; }
+
+#edit #wikiPreview #toc a {
+  color: #303646; }
+
+#edit #wikiPreview #toc a:hover {
+  color: #138bca; }
+
+#edit #wikiPreview h2 {
+  font-size: 20px;
+  padding: 0;
+  padding-left: 16px;
+  font-weight: 400;
+  position: relative;
+  color: #333;
+  margin-bottom: 10px;
+  border: none; }
+
+#edit #wikiPreview h2:not(.no-before):before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: #2CA7F8;
+  left: 0;
+  top: 65px; }
+
+#edit #wikiPreview h2 > span[id] {
+  padding-top: 60px; }
+
+#edit #wikiPreview p {
+  font-size: 14px;
+  color: #333;
+  line-height: 30px;
+  padding-left: 15px; }
+  #edit #wikiPreview p a {
+    color: #138BCA; }
+
+#edit #wikiPreview table {
+  margin-left: 15px; }
+
+#edit #wikiPreview ul {
+  margin: 20px 0;
+  padding-left: 30px;
+  font-size: 14px; }
+  #edit #wikiPreview ul li {
+    position: relative;
+    padding-left: 5px; }
+    #edit #wikiPreview ul li > * {
+      padding: 0; }
+  #edit #wikiPreview ul li:before {
+    content: "· ";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
+
+#edit #wikiPreview pre, #edit #wikiPreview p > code {
+  border: 1px solid #E6E6E6;
+  line-height: 26px;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #333;
+  margin-top: 10px;
+  background: #f5f5f5; }
+
+#edit #wikiPreview pre {
+  margin-left: 16px; }
+
+#edit #wikiPreview p > code {
+  padding: 10px;
+  display: inline-block; }
+
+#edit #wikiPreview h1, #edit #wikiPreview h2, #edit #wikiPreview h3, #edit #wikiPreview h4, #edit #wikiPreview h5, #edit #wikiPreview h6 {
+  padding-left: 15px;
+  padding-top: 60px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  border: none; }
+
+#edit + #footer {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px; }

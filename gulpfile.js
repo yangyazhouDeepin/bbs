@@ -44,7 +44,8 @@ var gulp = require('gulp'),
 				path: './'
 			},
 			port: '8888',
-			host: '10.0.13.58'
+			host: '10.0.17.153'
+			// host: "localhost"
 		}))
 	})
 	

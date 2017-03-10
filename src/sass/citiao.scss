@@ -13,6 +13,7 @@ body{
 	background-color: #F9F9F9;
 	font-family: '微软雅黑', 'Source Han Sans';
 	color: #333;
+	padding-top: 1px!important;
 	ul,li{
 		list-style: none;
 	}
@@ -22,7 +23,7 @@ body{
 	}
 	a:hover{cursor: pointer}
 
-	#ct.wrap{
+	.wrap{
 		width: 1140px;
 		margin: 0 auto;
 		margin-top: 100px;
@@ -34,98 +35,12 @@ body{
 		background-color: #FFFFFF;
 		border-radius: 4px;
 		border: 1px solid #ececec;
+		padding: 0;
 		padding-bottom: 80px;
 		margin-bottom: 40px;
-		
-		.right-line{
-			width: 1px; 
-			height: 100%;
-			position: absolute;
-			background: #e5e5e5;
-			top: 0;
-			left: precent(240);
-		}
-		.slide{
-			float: left;
-			width: precent(240);
-			background: #fff;
-			height: 100%;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-
-			.search{
-				height: 84px;
-				overflow: hidden;
-
-				.search_box{
-					display: block;
-					width: precent(170,240);
-					height: 36px;
-					border: 1px solid #e5e5e5;
-					border-radius: 4px;
-					padding-right: 30px;
-					margin-top: 24px;
-					margin-left: precent(20,240);
-					position: relative;
-
-				}
-				.active{
-					border: 1px solid #54a5d0;
-				}
-				.icon-search{
-					position: absolute;
-					right: 0;
-					top: 0;
-					height: 36px;
-					width: 30px;
-					background: url("//bbs.deepin.org/template/deepin/image/icon_search.png") no-repeat center center;
-				}
-				.icon-search:hover{
-					cursor: pointer;
-				}
-				input{
-					font-size: 12px;
-					outline: none;
-					padding-left: 10px;
-					border:none;
-					height: 100%;
-					width: 100%;
-					line-height: 36px;
-					border-radius: 4px 0 0 4px;
-					-webkit-box-sizing: border-box;
-					-moz-box-sizing: border-box;
-					box-sizing: border-box;
-				}
-			}
-			.nav{
-				padding-top: 36px;
-				padding-left: precent(30,240);
-				font-size: 14px; 
-
-				.active{
-					color: #138BCA;
-					>a{
-						color: #138BCA;
-					}
-				}
-				li{
-					line-height: 30px;
-					a:hover{
-						color: #138BCA;
-					}
-				}
-
-				.sub-nav{
-					padding-left: precent(28,210);
-					font-size: 12px;
-				}
-			}
-		}
 
 		.main{
 			float: right;
-			width: precent(900);
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
@@ -202,8 +117,6 @@ body{
 
 
 			section{
-				height: 871px;
-				overflow-y: scroll;
 				.other{
 					margin-bottom: 40px;
 
@@ -219,7 +132,7 @@ body{
 				.before{
 					margin-top: 36px;
 				}
-				h1{
+				h2{
 					font-size: 20px;
 					padding-left: 16px;
 					font-weight: 400;
@@ -228,10 +141,7 @@ body{
 					margin-bottom: 10px;
 
 				}
-				h1:not(.nom){
-					margin-top: 40px;
-				}
-				h1:not(.no-before):before{
+				h2:not(.no-before):before{
 					content: "";
 					position: absolute;
 					width: 5px;
@@ -255,19 +165,47 @@ body{
 					}
 				}
 
-				.remind{
-					margin-top: 40px;
-				}
-
-				.text{
+				pre,p >code{
 					border: 1px solid #E6E6E6;
-					line-height: 46px;
+					line-height: 26px;
 					padding-left: 20px;
 					font-size: 12px;
 					color: #333;
 					margin-left: 16px;
 					margin-top: 20px;
 					background: #f5f5f5;
+				}
+
+
+				.new-box{
+					#toc{
+						display: none;
+					}
+					hr{
+						display: none;
+					}
+
+					ul{
+						margin: 20px 0;
+						padding-left: 30px;
+						font-size: 14px;
+						li:before{
+							content: "·";
+							line-height: 26px;
+						}
+					}
+					h1,h2,h3,h4,h5,h6{
+						padding-left: 15px;
+						margin-top: 40px;
+						margin-bottom: 10px;
+						font-weight: normal;
+					}
+					table{
+						margin-left: 15px;
+					}
+					a{
+						color: #138BCA;
+					}
 				}
 			}
 		}

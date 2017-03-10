@@ -1,0 +1,119 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  padding-top: 1px;
+  background-color: #F9F9F9;
+  font-family: '微软雅黑', 'Source Han Sans'; }
+
+html[lang="en-US"] body {
+  font-family: 'open sans',"Noto Sans CJK SC","Source Han Sans CN"; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear:after {
+  content: ",";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+.wrap {
+  width: 1170px;
+  margin: 0 auto; }
+
+@media screen and (max-width: 1170px) {
+  .wrap {
+    width: auto; } }
+
+#edit {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px;
+  padding-bottom: 60px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  background: #ffffff;
+  margin-top: 100px; }
+  #edit > .title {
+    position: relative; }
+    #edit > .title h1 {
+      font-weight: normal;
+      font-size: 25px;
+      color: #AFAFAF;
+      margin-bottom: 16px; }
+    #edit > .title > p {
+      font-size: 12px;
+      color: #545968; }
+      #edit > .title > p a {
+        color: #138bca; }
+    #edit > .title .function {
+      position: absolute;
+      right: 0;
+      bottom: 18px; }
+      #edit > .title .function span {
+        display: inline-block;
+        width: 81px;
+        height: 37px;
+        line-height: 35px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #303646;
+        font-size: 14px;
+        text-align: center;
+        border: 1px solid #e6e6e6;
+        border-radius: 4px; }
+      #edit > .title .function .active {
+        background: #1D8FD0;
+        color: #ffffff;
+        border-color: #1D8FD0; }
+  #edit .line {
+    height: 1px;
+    background: #ececec;
+    margin-top: 18px;
+    margin-bottom: 10px; }
+  #edit .main textarea {
+    width: 100%;
+    border-radius: 4px;
+    border-color: #d9d9d9;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 34px 45px 41px 21px;
+    color: #303646;
+    line-height: 26px;
+    font-size: 14px;
+    min-height: 600px; }
+  #edit .main form {
+    margin-bottom: 30px; }
+  #edit .main .listening {
+    font-size: 12px;
+    line-height: 26px; }
+    #edit .main .listening input {
+      vertical-align: middle;
+      margin-right: 5px;
+      outline: none; }
+  #edit .main .notice {
+    color: #545968;
+    font-size: 12px;
+    line-height: 22px;
+    margin-top: 20px; }

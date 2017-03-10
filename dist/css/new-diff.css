@@ -1,0 +1,91 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  padding-top: 1px;
+  background-color: #F9F9F9;
+  font-family: '微软雅黑', 'Source Han Sans'; }
+
+html[lang="en-US"] body {
+  font-family: 'open sans',"Noto Sans CJK SC","Source Han Sans CN"; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body ul {
+  margin: 0; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+#diff input, #diff textarea {
+  font-family: inherit; }
+
+#newHeader .sub-menu {
+  margin: 0; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear:after {
+  content: ",";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+.wrap {
+  width: 1170px;
+  margin: 0 auto; }
+
+@media screen and (max-width: 1170px) {
+  .wrap {
+    width: auto; } }
+
+#diff {
+  margin-top: 100px;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px;
+  padding-bottom: 60px; }
+  #diff .route a {
+    color: #545968;
+    font-size: 12px;
+    text-decoration: none; }
+  #diff .route a:hover {
+    color: #138bca; }
+  #diff .route a:after {
+    content: " > "; }
+  #diff .route a:last-child:after {
+    content: "";
+    visibility: hidden; }
+  #diff .route a:last-child {
+    color: #138bca; }
+  #diff .diff-title {
+    font-size: 25px;
+    color: #303646;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ececec;
+    margin-top: 36px; }
+  #diff .box table td > div {
+    font-size: 12px;
+    line-height: 26px; }
+
+#diff + #footer {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px; }

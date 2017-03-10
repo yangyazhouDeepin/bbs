@@ -1,0 +1,40 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  width: 100%; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 14px;
+  font-family: '微软雅黑'; }
+  body .wrap {
+    width: 1024px;
+    margin: 0 auto; }
+  body header {
+    background: url("../image/blog_bg.jpg") no-repeat;
+    background-size: cover;
+    overflow: hidden; }
+    body header .introduce {
+      position: relative;
+      height: 100%;
+      overflow: hidden; }
+      body header .introduce > img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        top: 14px;
+        left: 0; }
+      body header .introduce .my {
+        width: 39.0625%;
+        text-align: center;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 0); }
+        body header .introduce .my h3 {
+          color: #fff;
+          font-size: xx-large; }

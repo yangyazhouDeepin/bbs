@@ -14,6 +14,7 @@ html[lang="en-US"] body{
 
 input{
 	font-family: inherit;
+	outline: none;
 }
 
 ul,li{
@@ -24,6 +25,12 @@ $fc1: #303646;
 $fc2: #545968;
 $ah: #138bca;
 
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -32,19 +39,25 @@ a{
 	text-decoration: none;
 	cursor: pointer;
 }
-#history a:hover{
-			color: $ah;
+#histroy a:hover{
+			color: #2ca7f8!important;
 		}
 #history{
 	background: #fff;
 }
 
-.clear:after{
-	content: ",";
-	height: 0;
-	visibility: hidden;
-	clear: both;
-	overflow: hidden;
+/* .clear:after{*/
+/* 	content: ",";*/
+/* 	height: 0;*/
+/* 	visibility: hidden;*/
+/* 	clear: both;*/
+/* 	overflow: hidden;*/
+/* }*/
+#mw-content-text{
+	font-size: 14px;
+	>a{
+		color: $ah;
+	}
 }
 
 .wrap{
@@ -52,6 +65,8 @@ a{
 	margin: 100px auto 0;
 	border-radius: 4px;
 	padding: 40px;
+
+
 
 	.route{
 		a{
@@ -68,14 +83,19 @@ a{
 		a:last-child{
 			color: $ah;
 		}
+
+		a:hover{
+			color: $ah;
+		}
 		
 	}
 	.new-title{
 		position: relative;
-		margin-top: 30px;
+		margin-top: 36px;
 		h1{
 			font-size: 25px;
 			color: $fc1;
+			margin-bottom: 12px;
 		}
 		p{
 			position: absolute;
@@ -107,20 +127,27 @@ a{
 			background-color: #1d8fd0;
 			color: #fff;
 			cursor: pointer;
+			border-color: #1d8fd0;
 		}
 	}
 
 	.table{
 		margin-top: 10px;
+		border-top: 1px solid #f3f3f3;
 		.item{
+			overflow: hidden;
+			padding: 19px 0;
 			border-bottom: 1px solid #f3f3f3;
-			height: 49px;
 			p{
 				display: inline-block;
 				float: left;
-				line-height: 49px;
 				font-size: 14px;
 				color: $fc1;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				@include box-sizing;
+				padding-left: 8px;
 			}
 			
 			.col-2{
@@ -128,25 +155,46 @@ a{
 			}
 			.col-12{
 				width: 15%;
+				white-space: normal;
 				a{
 					color: $ah;
 				}
 			}
-			.col-4{
-				width: 40%;
+			.col-34{
+				width: 35%;
+			}
+			.col-01{
+				width: 5%;
+
+				a{
+					color: $ah;
+				}
+			}
+			.col-3{
+				width: 30%;
+				min-height: 19px;
+			}
+
+			.col-1{
+				width: 10%;
+				white-space: normal;
+				a{
+					color: $ah;
+				}
+			}
+			.col-1:last-child{
+				text-align: left;
 			}	
 		}
 		.th{
 			background: #fbfbfb;
-			height: 64px;
-			p{
-				line-height: 64px;
-			}
-			
+			line-height: 26px;
+			padding: 22px 0 16px 0;
 		}
 	}
-	>.col-1{
+	.table+.col-1{
 		margin-top: 12px;
+		margin-bottom: 12px;
 	}
 
 	.footer{

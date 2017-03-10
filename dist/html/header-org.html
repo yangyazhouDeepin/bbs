@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<style>
+		@media screen and (max-width: 414px){
+			.phone_logo{display:block;width: 88.3px; height: 22px; background: url('//www.deepin.org/wp-content/uploads/phone_logo.png') no-repeat; background-size: 100% 100%; position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-ms-transform: translate(-50%,-50%)}
+			#hs-page #hs-masthead{height: 56px; border-top: none;}
+			#hs-site-branding a img{display: none;}
+			#hs-page  .hs-toggle-menu span{display: none;}
+			#hs-page  .hs-toggle-menu{right: 26.5px; top: 16.56px; width: 27.6px; height: 22px; background: url('/wp-content/uploads/phone_nav_icon.png') no-repeat; background-size: 100% 100%; }
+
+
+		}
+		@media screen and (max-width: 320px){
+			.custom-container .custom-container-left .banner .nav .nav-right div{
+				height: 26.5px;
+				line-height: 26.5px;
+			}
+		}
+
+	</style>
+	<style type="text/css">
+
+
+
+		#hs-masthead a{
+			color: #dedede;
+			font-weight: normal;
+		}
+
+		#hs-masthead.header-fixed .hs-menu .add-search >a,#hs-masthead.header-fixed .hs-menu .add-login>a{
+			height: 54px;
+		}
+
+		.new-search{
+			display: block;
+			width: 16px;
+			height: 16px;
+			background: url("//bbs.deepin.org/template/deepin/image/icon_search.png") no-repeat center center;
+		}
+		.hs-menu .add-search>a:after, .hs-menu .add-login>a:after{
+			border: none;
+		}
+		.hs-menu .add-search >a,.hs-menu .add-login>a{
+			width: 18px;
+			height: 80px;
+			padding: 0;
+			position: relative;
+		}
+		.hs-menu .add-search>a>span,.hs-menu .add-login>a>span{
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translate(0,-50%);
+			-ms-transform: translate(0,-50%);
+			-o-transform: translate(0,-50%);
+			transform: translate(0,-50%);
+			cursor: pointer;
+		}
+		.hs-main-navigation .add-login .sub-menu{
+			right: 0;
+			left: auto;
+			min-width: 102px;
+		}
+
+		.add-search .ipt-search{
+			box-sizing: border-box;
+			border-radius: 4px;
+			width: 230px;
+			height: 28px;
+			line-height: 28px;
+			padding-left: 30px;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			z-index: 99;
+			-webkit-transform: translate(0,-50%);
+			-ms-transform: translate(0,-50%);
+			-o-transform: translate(0,-50%);
+			transform: translate(0,-50%);
+			background-color:#fff ;
+			display: none;
+		}
+		.add-search .ipt-search input{
+			width: 196px;
+			height: 28px;
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			right: 0;
+			border: none;
+			line-height: 28px;
+			font-size: 12px;
+			padding-left: 0;
+			border-radius: 0 4px 4px 0;
+			outline: none;
+
+		}
+		.add-search .ipt-search .icon-s{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 24px;
+			height: 28px;
+			background: url("//bbs.deepin.org/template/deepin/image/icon_search.png") no-repeat right center;
+			background-size: 13px 13px;
+			margin: 0;
+			cursor: pointer;
+		}
+		.add-login img{
+			position: absolute;
+			top: 50%;
+			right: 0;
+			z-index: 99;
+			-webkit-transform: translate(0,-50%);
+			-ms-transform: translate(0,-50%);
+			-o-transform: translate(0,-50%);
+			transform: translate(0,-50%);
+		}
+		.new-login-in img{
+			width: 30px;
+			height: 30px;
+		}
+		.new-login-out img{
+			height: 16px;
+			height: 16px;
+		}
+
+		.add-login{
+			padding-left: 15px;
+		}
+
+		html[lang="en-US"] .hs-menu >.hs-clearfix > li >  a{
+			padding: 0 10px;
+		}
+		html[lang="en-US"] .add-search .ipt-search{
+			right: -10px;
+		}
+		@media screen and (min-width: 769px) and (max-width: 1180px){
+			#menu-main > li > a >span{
+				color: #444;
+			}
+
+			.hs-main-navigation  .hs-clearfix{
+				margin: 0 auto;
+				display: inline-block;
+			}
+			.hs-main-navigation .hs-clearfix > li{
+				float: left;
+			}
+			.add-search .ipt-search{
+				height: 30px;
+				border: 1px solid #ccc;
+			}
+
+		}
+		@media screen and (max-width: 768px){
+			#menu-main > li > a >span{
+				color: #444;
+				font-weight: bolder !important;
+			}
+			#hs-site-navigation .add-search>a{
+				width: auto;
+				height: 42px;
+				line-height: 42px;
+			}
+			#hs-site-navigation .add-search>a span{
+				display: none;
+			}
+			#hs-site-navigation .add-search .ipt-search{
+				display: block!important;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%,-50%);
+				-ms-transform: translate(-50%,-50%);
+				-o-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+				border: 1px solid #ccc;
+				height: 30px;
+			}
+
+			#hs-site-navigation .add-login >a{
+				width: auto;
+				height: 42px;
+				line-height: 42px;
+			}
+			#hs-site-navigation .add-login >a >img{
+				left: 50%;
+				-webkit-transform: translate(-50%,-50%);
+				-ms-transform: translate(-50%,-50%);
+				-o-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+			}
+			html[lang="en-US"] .hs-menu >.hs-clearfix > li > a{
+				padding: 10px;
+			}
+		}
+
+	</style>
+
+	<script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<header id="hs-masthead" class="hs-site-header hs-clearfix hs-black">
+		<div class="phone_logo"></div>
+		<div class="hs-container">
+			<div id="hs-site-branding">
+				<a href="https://www.deepin.org/" class="custom-logo-link" rel="home" itemprop="url"><img width="179" height="48" src="https://www.deepin.org/wp-content/uploads/2017/01/logo.png" class="custom-logo" alt="logo" itemprop="logo" srcset="https://www.deepin.org/wp-content/uploads/2017/01/logo.png 179w, https://www.deepin.org/wp-content/uploads/2017/01/logo-24x6.png 24w, https://www.deepin.org/wp-content/uploads/2017/01/logo-36x10.png 36w, https://www.deepin.org/wp-content/uploads/2017/01/logo-48x13.png 48w" sizes="(max-width: 179px) 100vw, 179px"></a>			</div><!-- .site-branding -->
+
+			<nav id="hs-site-navigation" class="hs-main-navigation">
+				<div class="hs-toggle-menu"><span></span></div>
+				<div class="hs-menu"><ul id="menu-main" class="hs-clearfix"><li id="menu-item-252" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-252"><a href="https://www.deepin.org" class="menu-image-title-after"><span class="menu-image-title">首页</span></a></li>
+<li id="menu-item-14221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14221"><a href="https://www.deepin.org/projects/dde/" class="menu-image-title-after"><span class="menu-image-title">项目</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="https://www.deepin.org/dde/" class="menu-image-title-after"><span class="menu-image-title">深度桌面环境</span></a></li>
+	<li id="menu-item-20185" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20185"><a href="https://www.deepin.org/original/deepin-installer/" class="menu-image-title-after"><span class="menu-image-title">深度原创应用</span></a></li>
+	<li id="menu-item-20186" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20186"><a href="https://www.deepin.org/cooperative/netease-cloud-music/" class="menu-image-title-after"><span class="menu-image-title">深度合作应用</span></a></li>
+	<li id="menu-item-21587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21587"><a href="https://www.deepin.org/dde/desktop-transplantation/" class="menu-image-title-after"><span class="menu-image-title">深度桌面移植</span></a></li>
+	<li id="menu-item-19604" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19604"><a href="https://www.deepin.org/project-update/" class="menu-image-title-after"><span class="menu-image-title">项目更新记录</span></a></li>
+</ul>
+</li>
+<li id="menu-item-14054" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14054"><a href="https://www.deepin.org/download" class="menu-image-title-after"><span class="menu-image-title">下载</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-14051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14051"><a href="https://www.deepin.org/download/" class="menu-image-title-after"><span class="menu-image-title">最新版本</span></a></li>
+	<li id="menu-item-19589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19589"><a href="https://www.deepin.org/release-notes/" class="menu-image-title-after"><span class="menu-image-title">发行注记</span></a></li>
+	<li id="menu-item-19603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19603"><a href="https://www.deepin.org/security-update/" class="menu-image-title-after"><span class="menu-image-title">安全更新</span></a></li>
+</ul>
+</li>
+<li id="menu-item-14222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14222"><a target="_blank" href="http://wiki.deepin.org" class="menu-image-title-after"><span class="menu-image-title">文档</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-302"><a target="_blank" href="https://wiki.deepin.org/" class="menu-image-title-after"><span class="menu-image-title">深度百科</span></a></li>
+	<li id="menu-item-13524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13524"><a href="https://www.deepin.org/installation/" class="menu-image-title-after"><span class="menu-image-title">如何安装</span></a></li>
+</ul>
+</li>
+<li id="menu-item-19679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19679"><a href="https://www.deepin.org/community-news/" class="menu-image-title-after"><span class="menu-image-title">新闻</span></a></li>
+<li id="menu-item-14223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14223"><a target="_blank" href="http://appstore.deepin.org/" class="menu-image-title-after"><span class="menu-image-title">应用中心</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308"><a href="https://www.deepin.org/deliver-applications/" class="menu-image-title-after"><span class="menu-image-title">投递应用</span></a></li>
+	<li id="menu-item-377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377"><a target="_blank" href="http://appstore.deepin.org/" class="menu-image-title-after"><span class="menu-image-title">应用预览</span></a></li>
+	<li id="menu-item-19601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19601"><a href="https://www.deepin.org/application-update/" class="menu-image-title-after"><span class="menu-image-title">应用更新</span></a></li>
+</ul>
+</li>
+<li id="menu-item-14225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14225"><a target="_blank" href="https://bbs.deepin.org" class="menu-image-title-after"><span class="menu-image-title">用户社区</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-314"><a target="_blank" href="https://bbs.deepin.org" class="menu-image-title-after"><span class="menu-image-title">论坛</span></a></li>
+	<li id="menu-item-315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-315"><a target="_blank" href="http://feedback.deepin.org/" class="menu-image-title-after"><span class="menu-image-title">用户反馈</span></a></li>
+	<li id="menu-item-313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-313"><a target="_blank" href="https://bbs.deepin.org/volunteer/index.php" class="menu-image-title-after"><span class="menu-image-title">志愿者地图</span></a></li>
+	<li id="menu-item-20165" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20165"><a href="https://www.deepin.org/mirrors/packages/" class="menu-image-title-after"><span class="menu-image-title">镜像源</span></a></li>
+	<li id="menu-item-20155" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20155"><a href="https://www.deepin.org/acknowledgments/deepin/" class="menu-image-title-after"><span class="menu-image-title">鸣谢</span></a></li>
+</ul>
+</li>
+<li id="menu-item-20377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-20377"><a href="https://www.deepin.org/developer-community/planning/" class="menu-image-title-after"><span class="menu-image-title">开发者社区</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"><a href="https://www.deepin.org/developer-community/planning/" class="menu-image-title-after"><span class="menu-image-title">版本规划</span></a></li>
+	<li id="menu-item-21799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21799"><a href="https://www.deepin.org/developer-community/architectural-design/" class="menu-image-title-after"><span class="menu-image-title">架构设计</span></a></li>
+	<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="https://www.deepin.org/developer-community/development/" class="menu-image-title-after"><span class="menu-image-title">参与开发</span></a></li>
+	<li id="menu-item-21479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21479"><a href="https://www.deepin.org/developer-community/internationalization/" class="menu-image-title-after"><span class="menu-image-title">国际化</span></a></li>
+	<li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299"><a href="https://www.deepin.org/developer-community/mailing-list/" class="menu-image-title-after"><span class="menu-image-title">邮件列表</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18413" class="qtranxs-lang-menu qtranxs-lang-menu-zh menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18413"><a title="中文" href="#" class="menu-image-title-after"><span class="menu-image-title">language:&nbsp;<img src="https://www.deepin.org/wp-content/plugins/qtranslate-x/flags/cn.png" alt="中文"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-21800" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-zh menu-item menu-item-type-custom menu-item-object-custom menu-item-21800"><a title="中文" href="https://www.deepin.org/zh/" class="menu-image-title-after"><span class="menu-image-title"><img src="https://www.deepin.org/wp-content/plugins/qtranslate-x/flags/cn.png" alt="中文">&nbsp;中文</span></a></li>
+	<li id="menu-item-21801" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-en menu-item menu-item-type-custom menu-item-object-custom menu-item-21801"><a title="English" href="https://www.deepin.org/en/" class="menu-image-title-after"><span class="menu-image-title"><img src="https://www.deepin.org/wp-content/plugins/qtranslate-x/flags/gb.png" alt="English">&nbsp;English</span></a></li>
+</ul>
+</li>
+
+<li class="add-search">
+	<a href="javascript:;">
+		<span class="new-search">
+			
+		</span>
+	</a>
+
+	<div class="ipt-search">
+		<p class="icon-s"></p>
+		<input type="text" placeholder="搜索...">
+	</div>
+</li>
+
+<li class="add-login">
+	<a href="javascript:;">
+		<img class="new-user new-login-out" src="//bbs.deepin.org/template/deepin/image/icon_user.png">
+	</a>
+	<ul class="sub-menu">
+		<li id="menu-item-302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-302"><a target="_blank" href="https://wiki.deepin.org/" class="menu-image-title-after"><span class="menu-image-title">登陆</span></a></li>
+		<li id="menu-item-13524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13524"><a href="https://www.deepin.org/installation/" class="menu-image-title-after"><span class="menu-image-title">注册</span></a></li>
+	</ul>
+</li>
+</ul>
+
+</div>			</nav><!-- #hs-site-navigation -->
+		</div>
+	</header>
+
+	<script type="text/javascript">
+		$(".add-search .new-search").click( function(evnet){
+			$(".ipt-search").css("display","block");
+			event.stopPropagation();
+		})
+		$(".add-search").click( function(event){
+			event.stopPropagation();
+		})
+		$(".ipt-search input").keydown( function(evnet){
+			if(event.keyCode==13&&$(".ipt-search input").val()){
+				window.location.href = window.location.origin+"?s="+$(".ipt-search input").val();
+			}
+		})
+		$(".ipt-search .icon-s").click( function(){
+			if($(".ipt-search input").val()){
+				window.location.href = window.location.origin+"?s="+$(".ipt-search input").val();
+			}
+		})
+		$(document).click( function(){
+			$(".ipt-search").css("display","none");
+			$(".ipt-search input").val("");
+		})
+	</script>
+</body>
+</html>

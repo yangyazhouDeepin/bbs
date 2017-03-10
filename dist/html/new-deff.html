@@ -1,0 +1,396 @@
+<html>
+
+<head>
+    <style>
+        #diff td{
+            white-space: normal;
+        }
+
+    </style>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="../js/header.js"></script>
+</head>
+
+<body>
+    <header id="newHeader">
+          <!-- <link rel="stylesheet" href="http://10.0.17.153:8888/dist/css/new-citiao.css"> -->
+        <link rel="stylesheet" href="http://10.0.17.153:8888/dist/css/newFooter.css">
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+        <!-- <script src="http://10.0.17.153:8888/dist/js/wiki-search.js"></script> -->
+        <!-- <link rel="stylesheet" type="text/css" href="http://10.0.17.153:8888/dist/css/wikihome.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="http://10.0.17.153:8888/dist/css/footer.css"> -->
+        <link rel="stylesheet" type="text/css" href="http://10.0.17.153:8888/dist/css/newHeader.css">
+        <link rel="stylesheet" href="../css/diffBasic.css">
+        <link rel="stylesheet" href="../css/new-diff.css">
+        <!-- <link rel="stylesheet" href="../css/new-diff.css">
+        <link rel="stylesheet" href="../css/newFooter.css">
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+        <script src="../js/wiki-search.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/wikihome.css">
+        <link rel="stylesheet" type="text/css" href="../css/footer.css">
+        <link rel="stylesheet" type="text/css" href="../css/newHeader.css"> -->
+        <div class="new-wrap hh">
+            <a class="logo left">
+                <img width="179" height="48" src="//www.deepin.org/wp-content/uploads/2017/01/logo.png" class="custom-logo" alt="logo">
+            </a>
+            <ul class="new-menu right">
+                <li><a href="http://www-data.deepin.org"><span class="new-line-animate">首页</span></a></li>
+                <li><a href="http://www-data.deepin.org/projects/dde/"><span class="new-line-animate">项目</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="http://www-data.deepin.org/dde/"><span class="new-line-animate">深度桌面环境</span></a></li>
+                        <li><a href="http://www-data.deepin.org/original/deepin-installer/"><span class="new-line-animate">深度原创应用</span></a></li>
+                        <li><a href="http://www-data.deepin.org/cooperative/netease-cloud-music/"><span class="new-line-animate">深度合作应用</span></a></li>
+                        <li><a href="http://www-data.deepin.org/project-update/"><span class="new-line-animate">项目更新记录</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="http://www-data.deepin.org/download"><span class="new-line-animate">下载</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="http://www-data.deepin.org/download/"><span class="new-line-animate">最新版本</span></a></li>
+                        <li><a href="http://www-data.deepin.org/release-notes/"><span class="new-line-animate">发行注记</span></a></li>
+                        <li><a href="http://www-data.deepin.org/security-update/"><span class="new-line-animate">安全更新</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="http://www-data.deepin.org/community-news/"><span class="new-line-animate">新闻</span></a></li>
+                <li><a href="http://wiki.deepin.org"><span class="new-line-animate">文档</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="https://wiki.deepin.org/"><span class="new-line-animate">深度百科</span></a></li>
+                        <li><a href="http://www-data.deepin.org/installation/"><span class="new-line-animate">如何安装</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="http://appstore.deepin.org/"><span class="new-line-animate">应用中心</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="http://www-data.deepin.org/deliver-applications/"><span class="new-line-animate">投递应用</span></a></li>
+                        <li><a href="http://appstore.deepin.org/"><span class="new-line-animate">应用预览</span></a></li>
+                        <li><a href="http://www-data.deepin.org/application-update/"><span class="new-line-animate">应用更新</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="https://bbs.deepin.org"><span class="new-line-animate">用户社区</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="https://bbs.deepin.org"><span class="new-line-animate">论坛</span></a></li>
+                        <li><a href="http://feedback.deepin.org/"><span class="new-line-animate">用户反馈</span></a></li>
+                        <li><a href="https://bbs.deepin.org/volunteer/index.php"><span class="new-line-animate">志愿者地图</span></a></li>
+                        <li><a href="http://www-data.deepin.org/mirrors/packages/"><span class="new-line-animate">镜像源</span></a></li>
+                        <li><a href="http://www-data.deepin.org/acknowledgments/deepin/"><span class="new-line-animate">鸣谢</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="http://www-data.deepin.org/developer-community/planning/"><span class="new-line-animate">开发者社区</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="http://www-data.deepin.org/developer-community/planning/"><span class="new-line-animate">版本规划</span></a></li>
+                        <li><a href="http://www-data.deepin.org/developer-community/development/"><span class="new-line-animate">参与开发</span></a></li>
+                        <li><a href="https://www.transifex.com/linuxdeepin/public/"><span class="new-line-animate">国际化</span></a></li>
+                        <li><a href="http://www-data.deepin.org/developer-community/mailing-list/"><span class="new-line-animate">邮件列表</span></a></li>
+                    </ul>
+                </li>
+                <li class="add-search">
+                    <a href="javascript:;">
+                        <span class="new-search">
+
+                        </span>
+                    </a>
+                    <div class="ipt-search">
+                        <p class="icon-s"></p>
+                        <input data-url="/index.php?title=Special%3A搜索&search=" type="text" placeholder="搜索...">
+                    </div>
+                </li>
+                <li class="add-login">
+                    <a href="javascript:;">
+                        <img class="new-user" height="16" width="16" src="//bbs.deepin.org/template/deepin/image/icon_user.png">
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="">
+                                <span>登陆</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>注册</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="diff" class="wrap">
+        <div class="route">
+            <a href="">百科首页</a>
+            <a href="">文件传输协议</a>
+            <a href="">历史版本</a>
+            <a href="">版本对比</a>
+        </div>
+
+        <p class="diff-title">
+            文件传输协议
+        </p>
+        <div class="box">
+            <div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr">
+                <table class="diff diff-contentalign-left" data-mw="interface" >
+                    <colgroup>
+                        <col class="diff-marker">
+                        <col class="diff-content">
+                        <col class="diff-marker">
+                        <col class="diff-content">
+                    </colgroup>
+                    <tbody>
+                        <tr style="vertical-align: top;" lang="zh-CN">
+                            <td colspan="2" class="diff-otitle" width="25%">
+                                <div id="mw-diff-otitle1"><strong><a href="/index.php?title=%E9%A6%96%E9%A1%B5&amp;oldid=15" title="首页">2017年2月16日 (四) 15:44的版本</a> <span class="mw-diff-edit">（<a href="/index.php?title=%E9%A6%96%E9%A1%B5&amp;action=edit&amp;oldid=15" title="首页">查看源代码</a>）</span></strong></div>
+                                <div id="mw-diff-otitle2"><a href="/index.php?title=%E7%94%A8%E6%88%B7:Ttt" title="用户:Ttt" class="mw-userlink">Ttt</a><span class="mw-usertoollinks">（<a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E8%B4%A1%E7%8C%AE/Ttt" title="特殊:用户贡献/Ttt">贡献</a>）</span></div>
+                                <div id="mw-diff-otitle3"></div>
+                                <div id="mw-diff-otitle5"></div>
+                                <div id="mw-diff-otitle4"><a href="/index.php?title=%E9%A6%96%E9%A1%B5&amp;diff=prev&amp;oldid=15" title="首页" id="differences-prevlink">←上一编辑</a></div>
+                            </td>
+                            <td colspan="2" class="diff-ntitle">
+                                <div id="mw-diff-ntitle1"><strong><a href="/index.php?title=%E9%A6%96%E9%A1%B5&amp;oldid=16" title="首页">2017年2月16日 (四) 16:12的版本</a> <span class="mw-diff-edit">（<a href="/index.php?title=%E9%A6%96%E9%A1%B5&amp;action=edit&amp;oldid=16" title="首页">查看源代码</a>）</span> </strong></div>
+                                <div id="mw-diff-ntitle2"><a href="/index.php?title=%E7%94%A8%E6%88%B7:Admin&amp;action=edit&amp;redlink=1" class="new mw-userlink" title="用户:Admin（页面不存在）">Admin</a><span class="mw-usertoollinks">（<a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E8%B4%A1%E7%8C%AE/Admin" title="特殊:用户贡献/Admin">贡献</a>）</span> </div>
+                                <div id="mw-diff-ntitle3"> <span class="comment">（以“111111”替换内容）</span></div>
+                                <div id="mw-diff-ntitle5"></div>
+                                <div id="mw-diff-ntitle4"><a href="/index.php?title=%E9%A6%96%E9%A1%B5&amp;diff=next&amp;oldid=16" title="首页" id="differences-nextlink">下一编辑→</a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="diff-lineno" id="mw-diff-left-l1">第1行：</td>
+                            <td colspan="2" class="diff-lineno">第1行：</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">werwerwer</del>
+                                </div>
+                            </td>
+                            <td class="diff-marker">+</td>
+                            <td class="diff-addedline">
+                                <div>
+                                    <ins class="diffchange diffchange-inline">111111</ins>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">wer</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">wer</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">wer</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">w</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">rew</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">er</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">wer</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">wer</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">we</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">rwer</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>&nbsp;</div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">123123</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">123</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">&lt;strong&gt;已安装MediaWiki。&lt;/strong&gt;</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>&nbsp;</div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">请查阅[//meta.wikimedia.org/wiki/Help:Contents 用户指南]以获取使用本wiki软件的信息！</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>&nbsp;</div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">== 入门 ==</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">* [//www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings MediaWiki配置设置列表]</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">* [//www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ/zh-hans MediaWiki常见问题]</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki发布邮件列表]</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">* [//www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources 本地化MediaWiki到您的语言]</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-marker">−</td>
+                            <td class="diff-deletedline">
+                                <div>
+                                    <del class="diffchange diffchange-inline">* [//www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam 了解如何在您的wiki上打击破坏]</del>
+                                </div>
+                            </td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="all-deepin-footer">
+            <div class="f-wrap">
+                <ul class="f-nav">
+                    <li class="f-item"><a href="//www.deepin.org/download/">下载</a></li>
+                    <li class="f-item"><a href="//wiki.deepin.org">文档</a></li>
+                    <li class="f-item"><a href="//www.deepin.org/dde/">项目</a></li>
+                    <li class="f-item"><a href="//bbs.deepin.org">用户社区</a></li>
+                    <li class="f-item"><a href="//www.deepin.org/developer-community/planning/">开发者社区</a></li>
+                    <li class="f-item"><a href="//www.deepin.org/aboutus/">关于我们</a></li>
+                </ul>
+                <div class="deepin-copy">
+                    <p>©2011-2017 武汉深之度科技有限公司 鄂ICP备14003693号-3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

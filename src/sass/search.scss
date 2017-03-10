@@ -9,7 +9,7 @@ html,body{
 body{
 	background: #f9f9f9;
 	font-family: '微软雅黑', 'Source Han Sans';
-	padding-top: 100px;
+	padding-top: 1px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -23,7 +23,7 @@ input{
 }
 
 .wrap{
-	min-height: 718px;
+	min-height: 780px;
 	box-sizing: border-box;
 }
 .search .text:focus{
@@ -31,16 +31,17 @@ input{
 }
 
 $fc1: #303646;
+$bf: #0b79b8;
 .left{float: left;}
 .right{float: right;}
 input{outline: none;}
-.button:hover{
-	opacity:.9;
+#page-search .button:hover{
+	background-color:  $bf;
 	cursor: pointer;
 }
-#page-search.wrap{
+.wrap{
 	width: 1140px;
-	margin: 0 auto;
+	margin: 100px auto 0;
 	background: #fff;
 	padding: precent(50,1140);
 	border-radius: 4px;
@@ -102,6 +103,19 @@ input{outline: none;}
 			border: none;
 			outline: none;
 		}
+
+		.searchresults{
+			>.box{
+				position: relative;
+				padding-left: 120px;
+				min-height: 135px;
+				>.left:not(.content){
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
 		.content{
 			margin-left: 35px;
 
@@ -113,9 +127,8 @@ input{outline: none;}
 
 			}
 			input{
-				width: 96px;
-				height: 36px;
 				line-height: 36px;
+				padding: 0 20px;
 				color: #fff;
 				background-color: #1D8FD0;
 				text-align: center;
@@ -128,6 +141,88 @@ input{outline: none;}
 	}
 
 }
+
+#page-search .mw-search-results{
+	border-top: 1px solid #f0f0f0;
+	li{
+		padding: 20px;
+		border-bottom: 1px solid #f0f0f0;
+
+		.highlight{
+			color: #138bca;
+		}
+		.mw-search-result-heading{
+			a{
+				font-size: 16px;
+				line-height: 1.88;
+				color: $fc1;
+			}
+		}
+		.searchresult{
+			font-size: 14px;
+			line-height: 1.43;
+			color: #545968;
+			margin-top: 10px;
+		}
+
+		.mw-search-result-data{
+			font-size: 12px;
+			color: #afafaf;
+			margin-top: 12px;
+		}
+
+		.searchmatch{
+			color: #138bca;
+		}
+	}
+}
+
+#page-search .create-links{
+	font-size: 14px;
+	line-height: 2.57;
+	margin-bottom: 30px;
+	color: $fc1;
+	span{
+		color: #d21a11;
+	}
+
+	>a{
+		background: #fff;
+		border: solid 1px #e6e6e6;
+		padding: 8px 16px;
+		font-size: 14px;
+		color: $fc1;
+		border-radius: 4px;
+		margin-left: 10px;
+	}
+
+	>a:hover{
+		background: #0b79b8;
+		border: 1px solid #0b79b8;
+		color: #fff;
+	}
+
+
+}
+
+#page-search .mw-search-pager-bottom{
+	margin-top: 20px;
+	margin-left: 20px;
+	a{
+		font-size: 14px;
+		color: $fc1;
+		margin-right: 16px;
+	}
+	a:hover{
+		color: #138bca;
+	}
+
+	.hidden:hover{
+		cursor:not-allowed;
+		color: $fc1;
+	}
+}
+
 
 @media screen and (max-width: 1140px){
 	.wrap{

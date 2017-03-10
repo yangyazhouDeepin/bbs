@@ -1,0 +1,176 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  background: #f9f9f9;
+  font-family: '微软雅黑', 'Source Han Sans';
+  padding-top: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html[lang="en-US"] body {
+  font-family: 'open sans',"Noto Sans CJK SC","Source Han Sans CN"; }
+
+input {
+  font-family: inherit; }
+
+.wrap {
+  min-height: 780px;
+  box-sizing: border-box; }
+
+.search .text:focus {
+  border: 1px solid #54a5d0; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+input {
+  outline: none; }
+
+#page-search .button:hover {
+  background-color: #0b79b8;
+  cursor: pointer; }
+
+.wrap {
+  width: 1140px;
+  margin: 100px auto 0;
+  background: #fff;
+  padding: 4.38596%;
+  border-radius: 4px; }
+  .wrap h1 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #303646; }
+  .wrap .search {
+    margin-top: 20px;
+    overflow: hidden; }
+    .wrap .search input {
+      box-sizing: border-box; }
+    .wrap .search .text {
+      width: 62.5%;
+      height: 36px;
+      line-height: 36px;
+      font-size: 14px;
+      color: #303646;
+      border-radius: 4px;
+      border: 1px solid #e5e5e5;
+      padding-left: 1.44231%; }
+    .wrap .search .button {
+      height: 36px;
+      line-height: 36px;
+      width: 9.23077%;
+      background: #1D8FD0;
+      border: none;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 4px; }
+    .wrap .search .text:focus {
+      border: 1px solid #54a5d0; }
+  .wrap .line {
+    height: 1px;
+    background: #ececec;
+    margin-top: 30px;
+    margin-bottom: 38px; }
+  .wrap .box {
+    overflow: hidden; }
+    .wrap .box .img {
+      width: 120px;
+      height: 135px;
+      border: none;
+      outline: none; }
+    .wrap .box .searchresults > .box {
+      position: relative;
+      padding-left: 120px;
+      min-height: 135px; }
+      .wrap .box .searchresults > .box > .left:not(.content) {
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .wrap .box .content {
+      margin-left: 35px; }
+      .wrap .box .content p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #303646;
+        line-height: 26px; }
+      .wrap .box .content input {
+        line-height: 36px;
+        padding: 0 20px;
+        color: #fff;
+        background-color: #1D8FD0;
+        text-align: center;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        margin-top: 20px; }
+
+#page-search .mw-search-results {
+  border-top: 1px solid #f0f0f0; }
+  #page-search .mw-search-results li {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0; }
+    #page-search .mw-search-results li .highlight {
+      color: #138bca; }
+    #page-search .mw-search-results li .mw-search-result-heading a {
+      font-size: 16px;
+      line-height: 1.88;
+      color: #303646; }
+    #page-search .mw-search-results li .searchresult {
+      font-size: 14px;
+      line-height: 1.43;
+      color: #545968;
+      margin-top: 10px; }
+    #page-search .mw-search-results li .mw-search-result-data {
+      font-size: 12px;
+      color: #afafaf;
+      margin-top: 12px; }
+    #page-search .mw-search-results li .searchmatch {
+      color: #138bca; }
+
+#page-search .create-links {
+  font-size: 14px;
+  line-height: 2.57;
+  margin-bottom: 30px;
+  color: #303646; }
+  #page-search .create-links span {
+    color: #d21a11; }
+  #page-search .create-links > a {
+    background: #fff;
+    border: solid 1px #e6e6e6;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #303646;
+    border-radius: 4px;
+    margin-left: 10px; }
+  #page-search .create-links > a:hover {
+    background: #0b79b8;
+    border: 1px solid #0b79b8;
+    color: #fff; }
+
+#page-search .mw-search-pager-bottom {
+  margin-top: 20px;
+  margin-left: 20px; }
+  #page-search .mw-search-pager-bottom a {
+    font-size: 14px;
+    color: #303646;
+    margin-right: 16px; }
+  #page-search .mw-search-pager-bottom a:hover {
+    color: #138bca; }
+  #page-search .mw-search-pager-bottom .hidden:hover {
+    cursor: not-allowed;
+    color: #303646; }
+
+@media screen and (max-width: 1140px) {
+  .wrap {
+    width: auto; } }

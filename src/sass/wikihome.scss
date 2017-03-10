@@ -31,6 +31,10 @@ input{
 	font-family: inherit;
 }
 
+input[type="button"]:hover{
+	cursor: pointer;
+}
+
 @function precent($px, $base: 1140) {
   @return ($px / $base) * 100%;
 }
@@ -60,7 +64,6 @@ input{
 				width: precent(276);
 				background: #fff;
 				padding:50px 0 60px 30px;
-				height: 100%;
 				box-sizing: border-box;
 				border-radius: 4px;
 				border: 1px solid #ececec;
@@ -149,7 +152,7 @@ input{
 						line-height: 36px;
 						font-size: 14px;
 						padding-left: 15px;
-						border: 1px solid #EBEBEB;
+						border: 1px solid #54a5d0;
 					}
 					.text:focus{
 						border: 1px solid #54a5d0;
@@ -165,7 +168,7 @@ input{
 						color: #fff;
 					}
 					.button:hover{
-						opacity: .9;
+						background-color: #0b79b8;
 					}
 				}
 
@@ -258,6 +261,7 @@ input{
 				font-size: 18px;
 				line-height: 26px;
 				color: #303646;
+				font-weight: normal;
 			}
 			.bottomLeft{
 				padding: 30px;

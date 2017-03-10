@@ -1,0 +1,120 @@
+#all-deepin-footer .menu>.menu-item .menu-image-title {
+    font-size: 14px;
+    color: #dedede
+}
+
+#all-deepin-footer .menu .sub-menu .menu-item .menu-image-title {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .4);
+    line-height: 28px
+}
+
+#all-deepin-footer .menu .sub-menu .menu-item .menu-image-title:before {
+    content: "· "
+}
+
+#all-deepin-footer .hs-footer ul li {
+    background: 0;
+    padding: 0
+}
+
+#all-deepin-footer #hs-bottom-footer {
+    height: 47.5px;
+    line-height: 47.5px;
+    background: rgba(10, 19, 38, .83)
+}
+
+#all-deepin-footer #hs-bottom-footer .hs-copy-right {
+    float: none;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .4);
+    text-align: center
+}
+
+
+
+
+#all-deepin-footer #hs-top-footer {
+    background: rgba(10, 19, 38, .82);
+    color: #AAA;
+    padding: 20px 0 10px 20px;
+    overflow: hidden
+}
+
+#all-deepin-footer .hs-container {
+    width: 1170px;
+    margin: 0 auto
+}
+
+#all-deepin-footer .hs-top-footer {
+    margin-left: -3%
+}
+
+#all-deepin-footer .hs-clearfix:before,
+#all-deepin-footer .hs-clearfix:after,
+#all-deepin-footer .entry-content:before,
+#all-deepin-footer .entry-content:after,
+#all-deepin-footer .comment-content:before,
+#all-deepin-footer .comment-content:after,
+#all-deepin-footer .site-footer:before,
+#all-deepin-footer .site-footer:after,
+#all-deepin-footer .hs-container:before,
+#all-deepin-footer .hs-container:after {
+    content: "";
+    display: table
+}
+
+#all-deepin-footer *:before,
+#all-deepin-footer *:after {
+    box-sizing: inherit
+}
+
+#all-deepin-footer .hs-footer {
+    float: left;
+    width: 13.5%;
+    margin-left: 3%
+}
+
+#all-deepin-footer .widget {
+    margin: 0 0 15px
+}
+
+#all-deepin-footer .hs-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+#all-deepin-footer .hs-footer ul li {
+    background: 0;
+    padding: 0
+}
+
+#all-deepin-footer * {
+    margin: 0;
+    padding: 0
+}
+
+#all-deepin-footer a:visited {
+    color: #2ca7f8
+}
+
+#all-deepin-footer a {
+    color: #2ca7f8;
+    text-decoration: none;
+}
+
+#all-deepin-footer a {
+    background-color: transparent
+}
+
+#all-deepin-footer a span{
+    transition: color .2s;
+}
+#all-deepin-footer a:hover span{
+    color: #fff !important;
+}
+
+#all-deepin-footer{
+    margin-top: 30px;
+}
